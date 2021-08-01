@@ -67,6 +67,8 @@ public:
   void NotifyHeater( uint32_t const Event );
   void NotifyDisplay( uint32_t const Event );
 
+  static uint32_t GetColdJunctionTemp( uint32_t AdcTemp );
+
   static int32_t Map(int32_t const value, int32_t const v_min, int32_t const v_max, int32_t const r_min, int32_t const r_max);
   static int32_t Adc2Temp( uint32_t const adc );
   static int32_t Temp2Adc( uint32_t const temp );
