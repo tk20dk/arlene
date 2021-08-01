@@ -24,6 +24,13 @@ TI2c I2c( hi2c1 );
 TOled128x64 Display( I2c );
 
 
+uint32_t TSolderingIronController::GetColdJunctionTemp( uint32_t const AdcTemp )
+{
+  // 1V to 3.3V
+  // 0C to 60C
+  return Map(AdcTemp, 1242, 4095, 0, 6000 );
+}
+
 void TSolderingIronController::UpdateConfig()
 {
   auto Status = HAL_FLASH_Unlock();
@@ -209,7 +216,7 @@ void TSolderingIronController::Loop()
       uint32_t const Vdda = 3300 * VREFINT_CAL / AdcData[ ADC_VREF ];
       Vin0 = ( AdcData[ ADC_VIN ] * Vdda * 78 ) / 4095000;
       Heat = Adc2Temp( AdcData[ ADC_IRON ] );
-      Ambiant = AdcData[ ADC_AMBIANT ];
+      Ambiant = GetColdJunctionTemp( AdcData[ ADC_AMBIANT ] );
 
       auto const AdcSetPoint = Temp2Adc( SetPoint );
       auto const Power0 = Pid.step( AdcSetPoint, AdcData[ ADC_IRON ] );
