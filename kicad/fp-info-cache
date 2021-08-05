@@ -1,4 +1,4 @@
-18764996067515021
+18982575371447021
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -81837,6 +81837,13 @@ KF141R-16
 32
 16
 arlene
+LED_D5.0mm-4_RGB
+LED, diameter 5.0mm, 2 pins, diameter 5.0mm, 3 pins, diameter 5.0mm, 4 pins, http://www.kingbright.com/attachments/file/psearch/000/00/00/L-154A4SUREQBFZGEW(Ver.9A).pdf
+LED diameter 5.0mm 2 pins diameter 5.0mm 3 pins diameter 5.0mm 4 pins RGB RGBLED
+0
+4
+4
+arlene
 LORA1287
 
 
@@ -81926,6 +81933,13 @@ RGB_LED_MATRIX
 
 0
 6
+6
+arlene
+RotaryEncoder_Alps_EC12E-Switch_Vertical_H20mm
+Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC12E/EC12E1240405.html & http://cdn-reichelt.de/documents/datenblatt/F100/402097STEC12E08.PDF
+rotary encoder
+0
+7
 6
 arlene
 SI7021
@@ -82032,3 +82046,10 @@ proto-area
 0
 355
 32
+arlene
+usb-c_14pin_tht_vertical
+
+
+0
+20
+17
